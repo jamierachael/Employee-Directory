@@ -2,11 +2,17 @@ import React, { useReducer } from 'react';
 // What goes here?
 
 export default class TableData extends React.Component {
+
+
+
+
+
+
     render() {
         return (
             <div>
                 {/* TableData */}
-                <table class="table">
+                <table className="table">
                     <tbody>
                         {/* /* {employee.map((employee) => (
 
@@ -21,7 +27,7 @@ export default class TableData extends React.Component {
                             // </tr>
 
                             // Or   
-                            
+                            // it would be this one: 
                             <tr>
                                 <th scope="row">1</th>
                                 <td image={this.employee.image}></td>
@@ -55,3 +61,4 @@ export default class TableData extends React.Component {
         )
     }
 }
+

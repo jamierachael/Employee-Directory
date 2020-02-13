@@ -1,51 +1,43 @@
 import React from 'react';
-import axios from "axios";
+// import axios from "axios";
+// import API from "../util/API";
 
 export default class SearchBar extends React.Component {
 
-    state = {
-        search: "",
-        employees: []
-    };
+    // state = {
+    //     search: "",
+    //     employees: []
+    // };
 
-    // searchEmployee = () => {
 
-    //     this.setState = (
+    // handleInputChange = (event) => {
+    //     const { name, value } = event.target;
+    //     this.setState(
     //         {
-
+    //             [name]: value
     //         }
     //     )
-
     // }
 
-    handleChange = (event) => {
-        const { name, value } = event.target;
-        this.setState(
-            {
-                [name]: value
-            }
-        )
-    }
+    // handleInputSubmit = (event) => {
+    //     event.preventDefault();
+    //     console.log(this.state);
+    //     const BASEURL = "https://randomuser.me/api/?results=200&nat=us";
 
-    handleInputSubmit = (event) => {
-        event.preventDefault();
-        console.log(this.state);
-        const BASEURL = "https://randomuser.me/api/?results=200&nat=us";
+    //     axios.get(BASEURL).then((response) => {
+    //         console.log(response);
+    //         // response.data.name;
+    //         this.setState(
+    //             {
+    //                 employees: response.data.name
+    //             }
+    //         )
 
-        axios.get(BASEURL).then((response) => {
-            console.log(response);
-            // response.data.name;
-            this.setState(
-                {
-                    employees: response.data.name
-                }
-            )
-
-        })
-            .catch((err) => {
-                console.log(err);
-            })
-    }
+    //     })
+    //         .catch((err) => {
+    //             console.log(err);
+    //         })
+    // }
 
 
 
@@ -53,14 +45,14 @@ export default class SearchBar extends React.Component {
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleInputSubmit}>
                     <input
                         name="search"
                         value={this.props.search}
-                        handleInputChange={this.handleInputChange}>
+                        onChange={this.props.handleInputChange}>
 
                     </input>
-                    <button handleSubmit={this.handleSubmission}>
+                    <button>
                         Search
                     </button>
                 </form>

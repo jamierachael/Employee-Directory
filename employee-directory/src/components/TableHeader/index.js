@@ -4,8 +4,8 @@ export default class TableHeader extends React.Component {
     render() {
         return (
             <div>
-                <table class="table">
-                    <thead class="thead-light">
+                <table className="table">
+                    <thead className="thead-light">
                         <tr>
                             <th scope="col">Image</th>
                             <th scope="col">Name</th>
