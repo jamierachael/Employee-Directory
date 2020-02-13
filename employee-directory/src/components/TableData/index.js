@@ -8,19 +8,30 @@ export default class TableData extends React.Component {
                 {/* TableData */}
                 <table class="table">
                     <tbody>
-                        {/* {user.map((user) => {
+                        {/* /* {employee.map((employee) => (
 
 
+                            // <tr>
+                            //     <th scope="row">1</th>
+                            //     <td image={employee.image}></td>
+                            //     <td name={employee.name}></td>
+                            //     <td phone={employee.phone}></td>
+                            //     <td email={employee.email}></td>
+                            //     <td DOB={employee.DOB}></td>
+                            // </tr>
+
+                            // Or   
+                            
                             <tr>
                                 <th scope="row">1</th>
-                                <td image={user.image}></td>
-                                <td name={user.name}></td>
-                                <td phone={user.phone}></td>
-                                <td email={user.email}></td>
-                                <td DOB={user.DOB}></td>
+                                <td image={this.employee.image}></td>
+                                <td name={this.employee.name}></td>
+                                <td phone={this.employee.phone}></td>
+                                <td email={this.employee.email}></td>
+                                <td DOB={this.employee.DOB}></td>
                             </tr>
 
-                        })} */}
+                    ))}  */}
 
                         <tr>
                             <th scope="row">2</th>
