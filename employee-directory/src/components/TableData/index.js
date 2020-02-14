@@ -1,6 +1,9 @@
 import React, { useReducer } from 'react';
 // What goes here?
 
+// Employess should load on page load
+// Search should filter through list of existing employees
+
 export default class TableData extends React.Component {
 
 
@@ -14,34 +17,26 @@ export default class TableData extends React.Component {
                 {/* TableData */}
                 <table className="table">
                     <tbody>
-                        {/* {this.props.employees.map((employees) => ( */}
-                        {/* or  */}
-                        {/* {employees.map((employees) => ( */}
-                        {/* 
+                        {this.props.employees.map((employee) => (
 
-                            // <tr>
-                            //     <th scope="row">1</th>
-                            //     <td image={employees.image}></td>
-                            //     <td name={employees.name}></td>
-                            //     <td phone={employees.phone}></td>
-                            //     <td email={employees.email}></td>
-                            //     <td DOB={employees.DOB}></td>
-                            // </tr> */}
 
-                        {/* // Or   
-                            // it would be this one:  */}
-                        {/* <tr>
+                            //  dob.date object
+
+                            < tr >
                                 <th scope="row">1</th>
-                                <td image={this.employees.image}></td>
-                                <td name={this.employees.name}></td>
-                                <td phone={this.employees.phone}></td>
-                                <td email={this.employees.email}></td>
-                                <td DOB={this.employees.DOB}></td>
-                            </tr> */}
+                                <td>{employee.image}</td>
+                                <td>{employee.name.first} {employee.name.last}</td>
+                                <td>{employee.phone}</td>
+                                <td>{employee.email}</td>
+                                <td>{employee.DOB}</td>
+                            </tr>
 
-                        {/* ))} */}
 
-                        <tr>
+
+
+                        ))}
+
+                        {/* <tr>
                             <th scope="row">2</th>
                             <td>Jacob</td>
                             <td>Thornton</td>
@@ -54,10 +49,10 @@ export default class TableData extends React.Component {
                             <td>the Bird</td>
                             <td>@twitter</td>
                             <td>@twitter</td>
-                        </tr>
+                        </tr> */}
                     </tbody>
                 </table>
-            </div>
+            </div >
 
 
         )

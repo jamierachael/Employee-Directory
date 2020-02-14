@@ -26,7 +26,7 @@ export default class TableArea extends React.Component {
 
     handleInputSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state);
+        console.log("stuff");
         const BASEURL = "https://randomuser.me/api/?results=200&nat=us";
 
         // const BASEURL = "https://randomapi.com/api/6de6abfedb24f889e0b5f675edc50deb?fmt=raw&sole";
@@ -37,7 +37,7 @@ export default class TableArea extends React.Component {
             this.setState(
                 {
                     // API returns "results" not "data"
-                    employees: response.results.name
+                    employees: response.data.results
                 }
             )
 
