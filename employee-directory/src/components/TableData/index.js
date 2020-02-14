@@ -14,30 +14,32 @@ export default class TableData extends React.Component {
                 {/* TableData */}
                 <table className="table">
                     <tbody>
-                        {/* /* {employee.map((employee) => (
-
+                        {/* {this.props.employees.map((employees) => ( */}
+                        {/* or  */}
+                        {/* {employees.map((employees) => ( */}
+                        {/* 
 
                             // <tr>
                             //     <th scope="row">1</th>
-                            //     <td image={employee.image}></td>
-                            //     <td name={employee.name}></td>
-                            //     <td phone={employee.phone}></td>
-                            //     <td email={employee.email}></td>
-                            //     <td DOB={employee.DOB}></td>
-                            // </tr>
+                            //     <td image={employees.image}></td>
+                            //     <td name={employees.name}></td>
+                            //     <td phone={employees.phone}></td>
+                            //     <td email={employees.email}></td>
+                            //     <td DOB={employees.DOB}></td>
+                            // </tr> */}
 
-                            // Or   
-                            // it would be this one: 
-                            <tr>
+                        {/* // Or   
+                            // it would be this one:  */}
+                        {/* <tr>
                                 <th scope="row">1</th>
-                                <td image={this.employee.image}></td>
-                                <td name={this.employee.name}></td>
-                                <td phone={this.employee.phone}></td>
-                                <td email={this.employee.email}></td>
-                                <td DOB={this.employee.DOB}></td>
-                            </tr>
+                                <td image={this.employees.image}></td>
+                                <td name={this.employees.name}></td>
+                                <td phone={this.employees.phone}></td>
+                                <td email={this.employees.email}></td>
+                                <td DOB={this.employees.DOB}></td>
+                            </tr> */}
 
-                    ))}  */}
+                        {/* ))} */}
 
                         <tr>
                             <th scope="row">2</th>

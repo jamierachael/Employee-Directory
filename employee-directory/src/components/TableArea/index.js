@@ -1,21 +1,11 @@
 import React from 'react';
 import axios from "axios";
-
 import PageHeader from '../PageHeader';
 import SearchBar from '../SearchBar';
 import TableData from '../TableData';
 import TableHeader from '../TableHeader';
 
-// export default class TableArea extends React.Component {
-//     render() {
-//         return (
-//             <div className="wrapper">
 
-
-//             </div>
-//         )
-//     }
-// }
 
 export default class TableArea extends React.Component {
 
@@ -38,6 +28,8 @@ export default class TableArea extends React.Component {
         event.preventDefault();
         console.log(this.state);
         const BASEURL = "https://randomuser.me/api/?results=200&nat=us";
+
+        // const BASEURL = "https://randomapi.com/api/6de6abfedb24f889e0b5f675edc50deb?fmt=raw&sole";
 
         axios.get(BASEURL).then((response) => {
             console.log(response);
@@ -63,13 +55,22 @@ export default class TableArea extends React.Component {
 
                 {/* {this.props.children} */}
                 <PageHeader />
-                <SearchBar handleInputChange={this.handleInputChange} />
+                {/* Where does handle submit go? */}
+                <SearchBar
+                    search={this.state.search}
+                    handleInputChange={this.handleInputChange}
+                    handleSubmit={this.handleInputSubmit}
+                // Added search and handle submit
+                />
 
                 <TableHeader />
-                <TableData />
+                <TableData
+                    // uncomment to test 
+                    employees={this.state.employees}
+                />
 
             </div>
-        )
+        );
     }
 
 }
