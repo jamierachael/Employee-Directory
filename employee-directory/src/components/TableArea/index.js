@@ -33,7 +33,9 @@ export default class TableArea extends React.Component {
 
         axios.get(BASEURL).then((response) => {
             console.log(response);
-            // response.data.name;
+
+
+
             this.setState(
                 {
                     // API returns "results" not "data"
@@ -67,6 +69,7 @@ export default class TableArea extends React.Component {
                 <TableData
                     // uncomment to test 
                     employees={this.state.employees}
+
                 />
 
             </div>

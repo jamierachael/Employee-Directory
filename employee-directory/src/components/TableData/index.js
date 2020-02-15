@@ -16,19 +16,30 @@ export default class TableData extends React.Component {
             <div>
                 {/* TableData */}
                 <table className="table">
+
+
                     <tbody>
+
                         {this.props.employees.map((employee) => (
 
 
                             //  dob.date object
 
                             < tr >
-                                <th scope="row">1</th>
-                                <td>{employee.image}</td>
+                                <th scope="row"></th>
+                                {/* <td>{employee.image}</td> */}
+
+                                <td>
+                                    <img
+                                        src={employee.picture.medium}
+                                        alt='employee'
+                                    />
+                                </td>
+
                                 <td>{employee.name.first} {employee.name.last}</td>
                                 <td>{employee.phone}</td>
                                 <td>{employee.email}</td>
-                                <td>{employee.DOB}</td>
+                                <td>{employee.dob.date}</td>
                             </tr>
 
 
@@ -36,20 +47,7 @@ export default class TableData extends React.Component {
 
                         ))}
 
-                        {/* <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
-                        </tr> */}
+
                     </tbody>
                 </table>
             </div >
