@@ -14,20 +14,28 @@ export default class TableData extends React.Component {
     render() {
         return (
             <div>
-                {/* TableData */}
+
                 <table className="table">
 
 
                     <tbody>
 
+                        {/* example w3schools */}
+                        {/* array.filter(function(currentValue, index, arr), thisValue) */}
+
+                        {/* example stackoverflow */}
+
+                        {/* {this.props.list.friend.filter(function (friend) {
+                            return <li>{friend[0] === 'true'}</li>
+                        })} */}
+
+
                         {this.props.employees.map((employee) => (
 
 
-                            //  dob.date object
 
                             < tr >
                                 <th scope="row"></th>
-                                {/* <td>{employee.image}</td> */}
 
                                 <td>
                                     <img
