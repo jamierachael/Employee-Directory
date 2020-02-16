@@ -29,10 +29,15 @@ export default class TableData extends React.Component {
                             return <li>{friend[0] === 'true'}</li>
                         })} */}
 
+                        {/* tried example, does not work */}
+                        {/* 
+                        {this.props.employees.name.filter(function (name) {
+
+                        {/* })}  */}
+
+                        {/* Works, need to change map to filter and add a sort function */}
 
                         {this.props.employees.map((employee) => (
-
-
 
                             < tr >
                                 <th scope="row"></th>
@@ -43,15 +48,13 @@ export default class TableData extends React.Component {
                                         alt='employee'
                                     />
                                 </td>
+                                {/* onClick for sort? */}
 
                                 <td>{employee.name.first} {employee.name.last}</td>
                                 <td>{employee.phone}</td>
                                 <td>{employee.email}</td>
                                 <td>{employee.dob.date}</td>
                             </tr>
-
-
-
 
                         ))}
 

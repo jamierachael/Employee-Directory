@@ -5,6 +5,11 @@ import React from 'react';
 export default class SearchBar extends React.Component {
 
 
+    //     function nameSort(e) {
+    //     e.preventDefault();
+    //     console.log('The link was clicked.');
+    // }
+
     render() {
         return (
             <div>
@@ -15,7 +20,13 @@ export default class SearchBar extends React.Component {
                         onChange={this.props.handleInputChange}>
 
                     </input>
+                    {/* <button onClick={nameSort}
+                >
+                    Search
+                    </button> */}
+
                     <button>
+
                         Search
                     </button>
                 </form>
@@ -23,3 +34,25 @@ export default class SearchBar extends React.Component {
         )
     };
 }
+
+
+// {this.props.employees.name.filter(function (name) {
+
+//     < tr >
+//         <th scope="row"></th>
+
+//         <td>
+//             <img
+//                 src={name.picture.medium}
+//                 alt='employee'
+//             />
+//         </td>
+//         {/* onClick for sort? */}
+//         <td>{name.name[0].first} {name.name[0].last}</td>
+//         <td>{name.phone}</td>
+//         <td>{name.email}</td>
+//         <td>{name.dob.date}</td>
+//     </tr>
+
+
+// })}

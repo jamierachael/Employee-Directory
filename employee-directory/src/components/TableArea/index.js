@@ -31,14 +31,26 @@ export default class TableArea extends React.Component {
     searchEmployee = () => [
         getEmployeeName(this.state.search)
             .then((response) => {
+
+                // Filter this employees: response.data.results
+
+
+                // const employees = employees.filter(emp =>
+                //     emp.name.includes(response.data.results)
+                // );
+                // const employeeName = response.data.results.filter(employeeName => {
+                //     employeeName.name.includes(employeeName.name)
+                // })
+
+
+
                 console.log(response);
-
-
 
                 this.setState(
                     {
-                        // API returns "results" not "data"
+                        // API returns "results" 
                         employees: response.data.results
+                        // employees: employeeName
                     }
                 )
 
@@ -55,7 +67,6 @@ export default class TableArea extends React.Component {
 
         // const BASEURL = "https://randomapi.com/api/6de6abfedb24f889e0b5f675edc50deb?fmt=raw&sole";
 
-        // axios.get(BASEURL).
         this.searchEmployee();
 
     }
@@ -66,21 +77,17 @@ export default class TableArea extends React.Component {
         return (
             <div className="wrapper" >
 
-                {/* {this.props.children} */}
                 <PageHeader />
-                {/* Where does handle submit go? */}
+
                 <SearchBar
                     search={this.state.search}
                     handleInputChange={this.handleInputChange}
                     handleSubmit={this.handleInputSubmit}
-                // Added search and handle submit
                 />
 
                 <TableHeader />
                 <TableData
-                    // uncomment to test 
                     employees={this.state.employees}
-
                 />
 
             </div>
