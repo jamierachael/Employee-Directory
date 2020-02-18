@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from "axios";
 import PageHeader from '../PageHeader';
 import SearchBar from '../SearchBar';
 import TableData from '../TableData';
@@ -26,31 +25,36 @@ export default class TableArea extends React.Component {
                 [name]: value
             }
         )
+
+
     }
 
+
     searchEmployee = () => [
-        getEmployeeName(this.state.search)
+        getEmployeeName()
             .then((response) => {
 
-                // Filter this employees: response.data.results
+                let filter = this.state.search;
+                // let resultsArray = [];
+                let filteredList = response.data.results.filter(item => {
+                    // merge data together, then see if user input is anywhere inside  
+
+                    let values = Object.values(item.name.first)
+                        .join("")
+                        .toLowerCase();
+
+                    return values.indexOf(filter.toLowerCase()) !== -1;
 
 
-                // const employees = employees.filter(emp =>
-                //     emp.name.includes(response.data.results)
-                // );
-                // const employeeName = response.data.results.filter(employeeName => {
-                //     employeeName.name.includes(employeeName.name)
-                // })
+                });
 
-
-
-                console.log(response);
+                // console.log(filteredList);
 
                 this.setState(
                     {
                         // API returns "results" 
-                        employees: response.data.results
-                        // employees: employeeName
+                        // search: "name",
+                        employees: filteredList
                     }
                 )
 
@@ -59,6 +63,9 @@ export default class TableArea extends React.Component {
                 console.log(err);
             })
     ]
+
+
+
 
     handleInputSubmit = (event) => {
         event.preventDefault();

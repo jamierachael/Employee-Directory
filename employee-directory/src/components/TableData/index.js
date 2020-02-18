@@ -4,10 +4,9 @@ import React, { useReducer } from 'react';
 // Employess should load on page load
 // Search should filter through list of existing employees
 
+
+
 export default class TableData extends React.Component {
-
-
-
 
 
 
@@ -19,21 +18,6 @@ export default class TableData extends React.Component {
 
 
                     <tbody>
-
-                        {/* example w3schools */}
-                        {/* array.filter(function(currentValue, index, arr), thisValue) */}
-
-                        {/* example stackoverflow */}
-
-                        {/* {this.props.list.friend.filter(function (friend) {
-                            return <li>{friend[0] === 'true'}</li>
-                        })} */}
-
-                        {/* tried example, does not work */}
-                        {/* 
-                        {this.props.employees.name.filter(function (name) {
-
-                        {/* })}  */}
 
                         {/* Works, need to change map to filter and add a sort function */}
 
