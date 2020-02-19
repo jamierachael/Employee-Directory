@@ -1,4 +1,6 @@
 import React, { useReducer } from 'react';
+import Moment from 'react-moment';
+
 // What goes here?
 
 // Employess should load on page load
@@ -22,7 +24,7 @@ export default class TableData extends React.Component {
                         {/* Works, need to change map to filter and add a sort function */}
 
                         {this.props.employees.map((employee) => (
-
+                            // Key 
                             < tr >
                                 <th scope="row"></th>
 
@@ -37,7 +39,11 @@ export default class TableData extends React.Component {
                                 <td>{employee.name.first} {employee.name.last}</td>
                                 <td>{employee.phone}</td>
                                 <td>{employee.email}</td>
-                                <td>{employee.dob.date}</td>
+                                <Moment format="YYYY/MM/DD">
+                                    <td>{employee.dob.date}</td>
+                                </Moment>
+                                {/* wrap in moment tag, install moment npm */}
+                                {/* <td>{employee.dob.date}</td> */}
                             </tr>
 
                         ))}

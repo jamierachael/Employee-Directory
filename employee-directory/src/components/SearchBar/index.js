@@ -10,6 +10,7 @@ export default class SearchBar extends React.Component {
     //     console.log('The link was clicked.');
     // }
 
+
     render() {
         return (
             <div>

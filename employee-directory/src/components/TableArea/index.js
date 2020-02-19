@@ -13,7 +13,7 @@ export default class TableArea extends React.Component {
         search: "name",
         employees: []
     };
-
+    // last search is no longer staying on page
     componentDidMount = () => {
         this.searchEmployee();
     }
@@ -29,23 +29,20 @@ export default class TableArea extends React.Component {
 
     }
 
-
+    // Working, but last search is not staying on page
     searchEmployee = () => [
         getEmployeeName()
             .then((response) => {
 
+                console.log(response);
                 let filter = this.state.search;
                 // let resultsArray = [];
                 let filteredList = response.data.results.filter(item => {
                     // merge data together, then see if user input is anywhere inside  
-
                     let values = Object.values(item.name.first)
                         .join("")
                         .toLowerCase();
-
                     return values.indexOf(filter.toLowerCase()) !== -1;
-
-
                 });
 
                 // console.log(filteredList);
@@ -78,7 +75,28 @@ export default class TableArea extends React.Component {
 
     }
 
+    // SortByName = () => {
+    //     function handleClick(e) {
+    //         e.preventDefault();
+    //         console.log('The link was clicked!');
+    //     }
+    // }
 
+    // random example: 
+    // Not useful
+    // Look up array of objects by key
+    // function compareValues(key, order = 'asc') {
+    //     return function innerSort(a, b) {
+    //       if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) return 0;
+    //       const comparison = a[key].localeCompare(b[key]);
+
+    //       return (
+    //         (order === 'desc') ? (comparison * -1) : comparison
+    //       );
+    //     };
+    //   }
+
+    // Key?
 
     render() {
         return (
@@ -93,6 +111,7 @@ export default class TableArea extends React.Component {
                 />
 
                 <TableHeader />
+                {/* <TableHeader SortByName={this.SortByName} /> */}
                 <TableData
                     employees={this.state.employees}
                 />
