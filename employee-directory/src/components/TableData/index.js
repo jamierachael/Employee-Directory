@@ -21,7 +21,8 @@ export default class TableData extends React.Component {
 
                     <tbody>
 
-                        {/* Works, need to change map to filter and add a sort function */}
+                        {/* Map Works */}
+                        {/* Moment works */}
 
                         {this.props.employees.map((employee) => (
                             // Key 
@@ -34,7 +35,7 @@ export default class TableData extends React.Component {
                                         alt='employee'
                                     />
                                 </td>
-                                {/* onClick for sort? */}
+
 
                                 <td>{employee.name.first} {employee.name.last}</td>
                                 <td>{employee.phone}</td>

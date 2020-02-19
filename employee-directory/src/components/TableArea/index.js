@@ -15,7 +15,7 @@ export default class TableArea extends React.Component {
     };
     // last search is no longer staying on page
     componentDidMount = () => {
-        this.searchEmployee();
+        this.loadEmployees();
     }
 
     handleInputChange = (event) => {
@@ -28,6 +28,27 @@ export default class TableArea extends React.Component {
 
 
     }
+
+    // Start copy paste
+
+    loadEmployees = () => [
+        getEmployeeName()
+            .then((response) => {
+                console.log(response);
+                this.setState(
+                    {
+                        // API returns "results" 
+                        // search: "name",
+                        employees: response.data.results
+                    }
+                )
+
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    ]
+
 
     // Working, but last search is not staying on page
     searchEmployee = () => [
