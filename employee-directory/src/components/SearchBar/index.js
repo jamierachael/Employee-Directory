@@ -1,14 +1,10 @@
 import React from 'react';
-// import axios from "axios";
-// import API from "../util/API";
+
 
 export default class SearchBar extends React.Component {
 
 
-    //     function nameSort(e) {
-    //     e.preventDefault();
-    //     console.log('The link was clicked.');
-    // }
+
 
 
     render() {
@@ -21,10 +17,6 @@ export default class SearchBar extends React.Component {
                         onChange={this.props.handleInputChange}>
 
                     </input>
-                    {/* <button onClick={nameSort}
-                >
-                    Search
-                    </button> */}
 
                     <button>
 

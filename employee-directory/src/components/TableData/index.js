@@ -40,11 +40,9 @@ export default class TableData extends React.Component {
                                 <td>{employee.name.first} {employee.name.last}</td>
                                 <td>{employee.phone}</td>
                                 <td>{employee.email}</td>
-                                <Moment format="YYYY/MM/DD">
+                                <Moment format="MM/DD/YYYY">
                                     <td>{employee.dob.date}</td>
                                 </Moment>
-                                {/* wrap in moment tag, install moment npm */}
-                                {/* <td>{employee.dob.date}</td> */}
                             </tr>
 
                         ))}

@@ -39,9 +39,7 @@ export default class TableHeader extends React.Component {
                             <th scope="col">DOB</th>
                         </tr>
                     </thead>
-                    {/* <tbody>
-                       On TableData Component
-                    </tbody> */}
+
                 </table>
             </div>
         )

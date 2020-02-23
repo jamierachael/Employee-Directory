@@ -9,11 +9,12 @@ import getEmployeeName from "../../util/API";
 
 export default class TableArea extends React.Component {
 
+
     state = {
         search: "name",
         employees: []
     };
-    // last search is no longer staying on page
+    // last search is staying on page
     componentDidMount = () => {
         this.loadEmployees();
     }
@@ -38,7 +39,6 @@ export default class TableArea extends React.Component {
                 this.setState(
                     {
                         // API returns "results" 
-                        // search: "name",
                         employees: response.data.results
                     }
                 )
@@ -66,12 +66,8 @@ export default class TableArea extends React.Component {
                     return values.indexOf(filter.toLowerCase()) !== -1;
                 });
 
-                // console.log(filteredList);
-
                 this.setState(
                     {
-                        // API returns "results" 
-                        // search: "name",
                         employees: filteredList
                     }
                 )
@@ -96,12 +92,19 @@ export default class TableArea extends React.Component {
 
     }
 
-    // SortByName = () => {
-    //     function handleClick(e) {
-    //         e.preventDefault();
-    //         console.log('The link was clicked!');
-    //     }
-    // }
+    // Last thing to do
+    SortByName = (e) => {
+        function handleClick(e) {
+            e.preventDefault();
+            console.log('The link was clicked!');
+        }
+    }
+
+    // const handleSort = (parameter) => {
+    //     (order === 'asc') ? setOrder('desc') : setOrder('asc')
+    //     const newSortedList = listUtils.sortList(employees, parameter, order)
+    //     setEmployees(newSortedList)
+    //   }
 
     // random example: 
     // Not useful
@@ -131,8 +134,8 @@ export default class TableArea extends React.Component {
                     handleSubmit={this.handleInputSubmit}
                 />
 
-                <TableHeader />
-                {/* <TableHeader SortByName={this.SortByName} /> */}
+                {/* <TableHeader /> */}
+                <TableHeader SortByName={this.SortByName} />
                 <TableData
                     employees={this.state.employees}
                 />
