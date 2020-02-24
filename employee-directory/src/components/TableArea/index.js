@@ -26,11 +26,7 @@ export default class TableArea extends React.Component {
                 [name]: value
             }
         )
-
-
     }
-
-    // Start copy paste
 
     loadEmployees = () => [
         getEmployeeName()
@@ -56,8 +52,9 @@ export default class TableArea extends React.Component {
             .then((response) => {
 
                 console.log(response);
+
                 let filter = this.state.search;
-                // let resultsArray = [];
+
                 let filteredList = response.data.results.filter(item => {
                     // merge data together, then see if user input is anywhere inside  
                     let values = Object.values(item.name.first)
@@ -106,19 +103,7 @@ export default class TableArea extends React.Component {
     //     setEmployees(newSortedList)
     //   }
 
-    // random example: 
-    // Not useful
-    // Look up array of objects by key
-    // function compareValues(key, order = 'asc') {
-    //     return function innerSort(a, b) {
-    //       if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) return 0;
-    //       const comparison = a[key].localeCompare(b[key]);
 
-    //       return (
-    //         (order === 'desc') ? (comparison * -1) : comparison
-    //       );
-    //     };
-    //   }
 
     // Key?
 
