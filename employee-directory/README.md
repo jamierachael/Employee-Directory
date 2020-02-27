@@ -3,7 +3,7 @@
 
 * ['Employee-Directory-React - Git Hub'](https://github.com/jamierachael/Employee-Directory)
 * ['Employee-Directory-React - Git Hub IO'](https://jamierachael.github.io/Employee-Directory/)
-* ['Employee-Directory-React - Demo Video'](https://drive.google.com/file/d/1Vh6ZDSei3ioBDL_XpzT2VJCAR8AWEm0u/view)
+
 
 
 

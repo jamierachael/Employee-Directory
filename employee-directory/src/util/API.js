@@ -1,5 +1,5 @@
 import axios from "axios";
-import cors from "cors";
+
 
 // const APIKEY = "&apikey=trilogy";
 
