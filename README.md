@@ -1,8 +1,10 @@
 # Employee-Directory-React
-## Homework 15 Employee-Directory-React
+
 
 * [Employee-Directory-React - Git Hub](https://github.com/jamierachael/Employee-Directory)
 * [Employee-Directory-React - Git Hub IO](https://jamierachael.github.io/Employee-Directory/)
+
+
 
 ![Employee-Directory-React - Demo](demo/gif.gif)
 
