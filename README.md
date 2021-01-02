@@ -1,20 +1,25 @@
 # Employee-Directory-React
 ## Homework 15 Employee-Directory-React
 
-* ['Employee-Directory-React - Git Hub'](https://github.com/jamierachael/Employee-Directory)
-* ['Employee-Directory-React - Git Hub IO'](https://jamierachael.github.io/Employee-Directory/)
+* [Employee-Directory-React - Git Hub](https://github.com/jamierachael/Employee-Directory)
+* [Employee-Directory-React - Git Hub IO](https://jamierachael.github.io/Employee-Directory/)
 
-
+![Employee-Directory-React - Demo](demo/gif.gif)
 
 
 ### Summary
 * This project emphasizes the use of React to create a searchable, sortable, employee directory.
 
+### Prerequisites
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Follow React set up before starting.
+
 ### To use, 
 * To Demo: follow GitHub IO link
 * To run: run npm start
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
@@ -82,3 +87,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Authors
+
+* **Jamie Rachael Morris** - *Initial work* - [Git Hub Profile](https://github.com/jamierachael)
+* UNH Project Design
+
+## Acknowledgments
+
+* Hat tip to UNH for providing project parameters and code examples
