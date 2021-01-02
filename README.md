@@ -2,7 +2,10 @@
 
 
 * [Employee-Directory-React - Git Hub](https://github.com/jamierachael/Employee-Directory)
-* [Employee-Directory-React - Git Hub IO](https://jamierachael.github.io/Employee-Directory/)
+* [Employee-Directory-React - Deployment](https://jamierachael.github.io/Employee-Directory/)
+* [Employee-Directory-React - Demo Video](https://drive.google.com/file/d/1VCRNKq1I1z94rhdecdtTUgpnhINzI1Ca/view?usp=sharing)
+
+
 
 ![Employee-Directory-React - Demo](demo/gif.gif)
 
